@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6f4a2f">
+<link rel="icon" href="assets/logo.png">
+<title>Reservation – DokterWay Clinic</title>
+<meta name="description" content="Reserve a free consultation or treatment at DokterWay Kemang, Bintaro or Bekasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="reservation">
+<header id="site-header"></header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Reservation</li></ol></nav>
+    <h1>Reserve your visit</h1>
+    <p>Choose a clinic, treatment and time. Consultation is free.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container grid" style="grid-template-columns:1.2fr .8fr;align-items:start" id="res-grid">
+    <div class="form-card">
+      <h3>New reservation</h3>
+      <form id="res-form">
+        <div class="row">
+          <label>Full name<input name="name" required></label>
+          <label>Phone / WhatsApp<input name="phone" type="tel" required placeholder="08xxxxxxxxxx"></label>
+        </div>
+        <div class="row">
+          <label>Clinic<select name="clinic" required></select></label>
+          <label>Treatment<select name="treatment"></select></label>
+        </div>
+        <label>Date<input name="date" type="date" required></label>
+        <div><div style="font-size:.85rem;font-weight:600;margin-bottom:.4rem">Time</div><div class="slots" id="slots"></div>
+          <span class="hint">Greyed-out slots are unavailable.</span></div>
+        <label>Notes (optional)<textarea name="notes" placeholder="Concerns, questions, allergies…"></textarea></label>
+        <div class="msg" role="alert"></div>
+        <button class="btn" type="submit">Request reservation</button>
+        <a class="btn wa" id="res-wa" href="#" target="_blank" rel="noopener" hidden>Send confirmation on WhatsApp</a>
+        <div class="notice">Your request is saved here, and the clinic team confirms the final time via WhatsApp or phone.</div>
+      </form>
+    </div>
+    <aside>
+      <h3>My reservations</h3>
+      <div class="grid" id="my-res"></div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<style>@media(max-width:960px){#res-grid{grid-template-columns:1fr!important}}</style>
+<script src="app.js"></script>
+</body>
+</html>

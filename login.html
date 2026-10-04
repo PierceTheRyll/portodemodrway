@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6f4a2f">
+<link rel="icon" href="assets/logo.png">
+<title>Sign in / Sign up – DokterWay Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+<header id="site-header"></header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Account</li></ol></nav>
+    <h1>Your DokterWay account</h1>
+    <p>Sign in or create an account to reserve consultations and leave reviews.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container" style="max-width:520px">
+    <div class="form-card" id="auth-box">
+      <div class="tabs" role="tablist"><button data-t="login" type="button" role="tab">Sign in</button><button data-t="signup" type="button" role="tab">Sign up</button></div>
+
+      <form id="login-form">
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+        <div class="msg" role="alert"></div>
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+
+      <form id="signup-form" hidden>
+        <label>Full name<input name="name" required autocomplete="name"></label>
+        <div class="row">
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          <label>Phone / WhatsApp<input name="phone" type="tel" required autocomplete="tel" placeholder="08xxxxxxxxxx"></label>
+        </div>
+        <div class="row">
+          <label>Password<input name="password" type="password" required minlength="8" autocomplete="new-password"><span class="hint">Min. 8 characters</span></label>
+          <label>Confirm password<input name="confirm" type="password" required autocomplete="new-password"></label>
+        </div>
+        <div class="msg" role="alert"></div>
+        <button class="btn" type="submit">Create account</button>
+      </form>
+    </div>
+    <p class="hint center" style="margin-top:1rem">Demo note: accounts are stored in this browser only (localStorage). Connect a backend before going live.</p>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="app.js"></script>
+</body>
+</html>
